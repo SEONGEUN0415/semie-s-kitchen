@@ -1,0 +1,1127 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0" /> -->
+    <title>semie's kitchen</title>
+    <!-- Link Swiper's CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+    <!-- css file -->
+    <link rel="stylesheet" href="css/style.css" />
+    <!-- fontawesome -->
+    <script
+      src="https://kit.fontawesome.com/fdf75b0975.js"
+      crossorigin="anonymous"
+    ></script>
+    <script>
+      window.onload = () => {
+        let slide = document.querySelectorAll(".section01 .swiper-slide");
+        let category = document.querySelectorAll(
+          ".section01 .swiper-slide > div > span"
+        );
+        let menu = document.querySelectorAll(".section01 ul li");
+        /* receipe */
+        category.forEach((item) => {
+          if (item.innerHTML === "레시피") item.classList.add("receipe");
+        });
+        console.log(menu);
+        /* category active */
+        for (let i = 0; i < menu.length; i++) {
+          menu[i].addEventListener("click", () => {
+            /*menu active */
+            menu.forEach((item) => {
+              item.classList.remove("on");
+            });
+            menu[i].classList.add("on");
+          });
+        }
+      };
+    </script>
+  </head>
+  <body>
+    <div id="wrap">
+      <header id="header" class="header">
+        <a href="#">
+          <img src="img/logo.svg" alt="" />
+        </a>
+        <nav>
+          <ul class="gnb">
+            <li>
+              <a href="#">요리초보가이드</a>
+            </li>
+            <li>
+              <a href="#">요리연구소</a>
+              <ul class="depth">
+                <li><a href="#">레시피</a></li>
+                <li><a href="#">솔루션</a></li>
+              </ul>
+              <!-- .depth01 end -->
+            </li>
+            <li>
+              <a href="#">요리해요</a>
+              <ul class="depth">
+                <li><a href="#">요리해요</a></li>
+                <li><a href="#">고민있어요</a></li>
+              </ul>
+              <!-- .depth02 end -->
+            </li>
+            <li>
+              <a href="#">WOW이벤트</a>
+            </li>
+          </ul>
+          <!-- .gnb end -->
+        </nav>
+        <div class="util">
+          <ul>
+            <li><a href="#" onclick="return false">로그인</a></li>
+          </ul>
+          <div class="search">
+            <a href=""><i class="fa-solid fa-magnifying-glass"></i></a>
+          </div>
+        </div>
+        <!-- .util end -->
+      </header>
+      <!-- .header end -->
+
+      <main id="main">
+        <section class="main__visual">
+          <!-- Swiper -->
+          <div class="swiper main__left-swiper01">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <figure>
+                  <img src="img/mainvisual_img06.jpeg" alt="" />
+                </figure>
+              </div>
+            </div>
+          </div>
+          <!-- main__left-swiper01 end -->
+          <div class="inner">
+            <div class="swiper main__left-swiper02">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                  <figure>
+                    <img src="img/mainvisual_img01.jpeg" alt="" />
+                  </figure>
+                </div>
+              </div>
+            </div>
+            <!-- main__left-slide02 end -->
+            <div class="swiper main__center-swiper">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                  <figure>
+                    <img src="img/mainvisual_img02.jpeg" alt="" />
+                  </figure>
+                </div>
+              </div>
+            </div>
+            <!-- main__center-swiper end -->
+            <div class="swiper main__right-swiper01">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                  <figure>
+                    <img src="img/mainvisual_img03.jpeg" alt="" />
+                  </figure>
+                </div>
+              </div>
+            </div>
+            <!-- main__right-swiper01 end -->
+            <div class="swiper-control">
+              <div class="pages">
+                <span class="current-num">01</span>
+                <span>06</span>
+                <div class="swiper-scrollbar"></div>
+              </div>
+              <div class="navigation__btn">
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
+              </div>
+            </div>
+            <div class="title">
+              <p>추천드려요!</p>
+              <h3>요리초보 가이드</h3>
+              <a>
+                <span>가이드 더보기</span>
+                <img src="img/plus_white.png" alt="" />
+              </a>
+            </div>
+          </div>
+          <!-- .inner end -->
+          <div class="swiper main__right-swiper02">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <figure>
+                  <img src="img/mainvisual_img04.jpeg" alt="" />
+                </figure>
+              </div>
+            </div>
+          </div>
+          <!-- main__right-swiper02 end -->
+        </section>
+        <!-- .main__visual end -->
+
+        <section class="section01">
+          <h3>
+            요리연구소
+            <a href="#" onclick="return false"
+              >더보기 <img src="img/right__img.png" alt=""
+            /></a>
+          </h3>
+          <ul>
+            <li class="on">전체</li>
+            <li>레시피</li>
+            <li>솔루션</li>
+          </ul>
+          <div class="list">
+            <!-- Swiper -->
+            <div class="swiper mySwiper02">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                  <figure>
+                    <img src="img/section01_img01.jpeg" alt="" />
+                  </figure>
+                  <div>
+                    <span>솔루션</span>
+                    <h4>이것만 알면 휘뚤마뚤 파스타 가능</h4>
+                    <p>파스타 요리의 기본, 면 제대로 삶기</p>
+                    <div class="hashtag">
+                      <span>#파스타</span>
+                      <span>#스파게티</span>
+                    </div>
+                  </div>
+                </div>
+                <!-- swiper-slide end -->
+                <div class="swiper-slide">
+                  <figure>
+                    <img src="img/section01_img02.jpeg" alt="" />
+                  </figure>
+                  <div>
+                    <span>솔루션</span>
+                    <h4>치즈, 어디까지 알고 있니?</h4>
+                    <p>다양한 치즈와 치즈플래터 만들기</p>
+                    <div class="hashtag">
+                      <span>#치즈</span>
+                      <span>#플래터</span>
+                    </div>
+                  </div>
+                </div>
+                <!-- swiper-slide end -->
+                <div class="swiper-slide">
+                  <figure>
+                    <img src="img/section01_img03.jpeg" alt="" />
+                  </figure>
+                  <div>
+                    <span>솔루션</span>
+                    <h4>알록달록 허브과일꽃 얼음</h4>
+                    <p>홈파티에서 눈길을 사로잡는 팁!</p>
+                    <div class="hashtag">
+                      <span>#홈파티</span>
+                      <span>#음료</span>
+                    </div>
+                  </div>
+                </div>
+                <!-- swiper-slide end -->
+                <div class="swiper-slide">
+                  <figure>
+                    <img src="img/section01_img04.jpeg" alt="" />
+                  </figure>
+                  <div>
+                    <span>레시피</span>
+                    <h4>수제 함박스테이크 만들기</h4>
+                    <p>여러 개 만들어 쟁여두면 든든한 함박스테이크</p>
+                    <div class="hashtag">
+                      <span>준비시간</span>
+                      <span>조리시간</span>
+                    </div>
+                  </div>
+                </div>
+                <!-- swiper-slide end -->
+                <div class="swiper-slide">
+                  <figure>
+                    <img src="img/section01_img05.jpeg" alt="" />
+                  </figure>
+                  <div>
+                    <span>솔루션</span>
+                    <h4>국 vs 찌개 vs 짜글이</h4>
+                    <p>내가 끓인 국물요리의 정체는?</p>
+                    <div class="hashtag">
+                      <span>#국물</span>
+                      <span>#찌개</span>
+                    </div>
+                  </div>
+                </div>
+                <!-- swiper-slide end -->
+
+                <div class="swiper-slide">
+                  <figure>
+                    <img src="img/section01_img06.jpeg" alt="" />
+                  </figure>
+                  <div>
+                    <span>레시피</span>
+                    <h4>얼큰칼칼 고추장찌개</h4>
+                    <p>얼큰한 국물이 땡긴다면!</p>
+                    <div class="hashtag">
+                      <span>준비시간</span>
+                      <span>조리시간</span>
+                    </div>
+                  </div>
+                </div>
+                <!-- swiper-slide end -->
+                <div class="swiper-slide">
+                  <figure>
+                    <img src="img/section01_img07.jpeg" alt="" />
+                  </figure>
+                  <div>
+                    <span>솔루션</span>
+                    <h4>당면 운동회</h4>
+                    <p>누가누가 더 길까?</p>
+                    <div class="hashtag">
+                      <span>#요리놀이</span>
+                      <span>#당면</span>
+                    </div>
+                  </div>
+                </div>
+                <!-- swiper-slide end -->
+                <div class="swiper-slide">
+                  <figure>
+                    <img src="img/section01_img08.jpeg" alt="" />
+                  </figure>
+                  <div>
+                    <span>레시피</span>
+                    <h4>호호후후 떠먹는 감자피자</h4>
+                    <p>밀가루 없이 감자로 건강하게 만들어요.</p>
+                    <div class="hashtag">
+                      <span>준비시간</span>
+                      <span>조리시간</span>
+                    </div>
+                  </div>
+                </div>
+                <!-- swiper-slide end -->
+                <div class="swiper-slide">
+                  <figure>
+                    <img src="img/section01_img09.jpeg" alt="" />
+                  </figure>
+                  <div>
+                    <span>솔루션</span>
+                    <h4>'마라'는 어떤 재료?</h4>
+                    <p>마라는 1가지 재료가 아니다?</p>
+                    <div class="hashtag">
+                      <span>#마라</span>
+                      <span>#향신료</span>
+                    </div>
+                  </div>
+                </div>
+                <!-- swiper-slide end -->
+                <div class="swiper-slide">
+                  <figure>
+                    <img src="img/section01_img10.jpeg" alt="" />
+                  </figure>
+                  <div>
+                    <span>솔루션</span>
+                    <h4>태태 태자로 끝나는 말은?</h4>
+                    <p>금태, 명태, 먹태, 황태, 생태🎵</p>
+                    <div class="hashtag">
+                      <span>#먹태</span>
+                      <span>#명태</span>
+                    </div>
+                  </div>
+                </div>
+                <!-- swiper-slide end -->
+                <div class="swiper-slide">
+                  <figure>
+                    <img src="img/section01_img11.jpeg" alt="" />
+                  </figure>
+                  <div>
+                    <span>솔루션</span>
+                    <h4>꽃다발 대신, 채소다발</h4>
+                    <p>채소로 만드는 예쁘고 색다른 채소다발</p>
+                    <div class="hashtag">
+                      <span>#요리선물</span>
+                      <span>#이색요리</span>
+                    </div>
+                  </div>
+                </div>
+                <!-- swiper-slide end -->
+                <div class="swiper-slide">
+                  <figure>
+                    <img src="img/section01_img12.jpeg" alt="" />
+                  </figure>
+                  <div>
+                    <span>레시피</span>
+                    <h4>봉주르-코코뱅 & 뱅쇼</h4>
+                    <p>집에 와인이 있다면, 2가지 요리 추천!</p>
+                    <div class="hashtag">
+                      <span>준비시간</span>
+                      <span>조리시간</span>
+                    </div>
+                  </div>
+                </div>
+                <!-- swiper-slide end -->
+                <div class="swiper-slide">
+                  <figure>
+                    <img src="img/section01_img13.jpeg" alt="" />
+                  </figure>
+                  <div>
+                    <span>레시피</span>
+                    <h4>떡볶이계의 샛별, 시금치크림떡볶이</h4>
+                    <p>크림과 시금치 조합 모르는 사람 없게 해주세요</p>
+                    <div class="hashtag">
+                      <span>준비시간 | 15분</span>
+                      <span>조리시간 | 15분</span>
+                    </div>
+                  </div>
+                </div>
+                <!-- swiper-slide end -->
+                <div class="swiper-slide">
+                  <figure>
+                    <img src="img/section01_img14.jpeg" alt="" />
+                  </figure>
+                  <div>
+                    <span>솔루션</span>
+                    <h4>바다의 상추, 파래</h4>
+                    <p>파래의 특징과 세척법 알고가요!</p>
+                    <div class="hashtag">
+                      <span>#해조류</span>
+                      <span>#파래</span>
+                    </div>
+                  </div>
+                </div>
+                <!-- swiper-slide end -->
+                <div class="swiper-slide">
+                  <figure>
+                    <img src="img/section01_img15.jpeg" alt="" />
+                  </figure>
+                  <div>
+                    <span>레시피</span>
+                    <h4>완벽하게 달걀 삶는 법</h4>
+                    <p>노른자 취향에 따라 달라지는 계란 삶는 법!</p>
+                    <div class="hashtag">
+                      <span>준비시간 | 0분</span>
+                      <span>조리시간 | 15분</span>
+                    </div>
+                  </div>
+                </div>
+                <!-- swiper-slide end -->
+                <div class="swiper-slide">
+                  <figure>
+                    <img src="img/section01_img16.jpeg" alt="" />
+                  </figure>
+                  <div>
+                    <span>솔루션</span>
+                    <h4>7가지 감자 썰기</h4>
+                    <p>써는 모양에 따라 식감이 달리지는 감자</p>
+                    <div class="hashtag">
+                      <span>#감자</span>
+                      <span>#요리 기본</span>
+                    </div>
+                  </div>
+                </div>
+                <!-- swiper-slide end -->
+                <div class="swiper-slide">
+                  <figure>
+                    <img src="img/section01_img17.jpeg" alt="" />
+                  </figure>
+                  <div>
+                    <span>레시피</span>
+                    <h4>메뉴 활용도 최고 감자샐러드</h4>
+                    <p>
+                      그냥 먹어도 좋고, 빵과 곁들여 든든하게 먹기 좋은 감자
+                      샐러드
+                    </p>
+                    <div class="hashtag">
+                      <span>준비시간 | 20분</span>
+                      <span>조리시간 | 5분</span>
+                    </div>
+                  </div>
+                </div>
+                <!-- swiper-slide end -->
+                <div class="swiper-slide">
+                  <figure>
+                    <img src="img/section01_img18.jpeg" alt="" />
+                  </figure>
+                  <div>
+                    <span>솔루션</span>
+                    <h4>이것만 알면 휘뚤마뚤 파스타 가능!</h4>
+                    <p>파스타 요리의 기본, 면 제대로 삶기!</p>
+                    <div class="hashtag">
+                      <span>#파스타</span>
+                      <span>#스파게티</span>
+                    </div>
+                  </div>
+                </div>
+                <!-- swiper-slide end -->
+              </div>
+              <!-- .swiper-wrapper end -->
+              <div class="swiper-button-next"></div>
+              <div class="swiper-button-prev"></div>
+              <div class="swiper-pagination"></div>
+              <div class="swiper-pagination02"></div>
+            </div>
+            <!-- .swiper end -->
+          </div>
+          <!-- .list end -->
+        </section>
+        <!-- section01 end -->
+
+        <section class="section02">
+          <div class="title">
+            <h3>요리해요</h3>
+            <a href="#" onclick="return false">
+              더보기<img src="img/right__img.png" alt="" />
+            </a>
+          </div>
+          <!-- .title end -->
+          <div class="list">
+            <!-- Swiper -->
+            <div class="swiper mySwiper03">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                  <a href="#" onclick="return false">
+                    <div>
+                      <h4>돼지목살 김치찌개</h4>
+                      <p>2023.12.24 04:31</p>
+                    </div>
+                    <figure>
+                      <img src="img/section02_img16.jpeg" alt="" />
+                    </figure>
+                    <p>
+                      우리가족 모두 좋아하는 돼지목살 김치찌개했어요 날이
+                      추워지니 이런 찌개 넘 맛있어요 밥도둑이 따로없지 뭐에요~
+                      동전육수 두 알에 물 맞춰 넣고 김치 물 양에 따라 넣고
+                      돼지목살 넣고 끓이다가 설탕으로 신맛을 중화시키고 여기서
+                      키포인트 된장 한숟갈!! 예!?된장을 넣는다구요?? 네네!!
+                      된장을 한 숟갈 넣음 깊고 구수한 맛이 나요 김치찌개가 더
+                      맛있어지는 마법입니다ㅋ(소곤) 요리 배울 때 들었숩니당ㅋ
+                      그리고 파 넣고 맛나게 드세요~ 내가 요리하는 이유는요
+                      일반적이고 흔한 요리지만 특별히 맛있게 만들 수 있는
+                      요리팁을 가진 무기가 있다면 그 요리에 자신이 생겨 뚝딱
+                      만들고 있어요~ 저만아는 꿀팁인데 김치찌개 된장 한 숟갈
+                      잊지마세요🤗🤗🤗
+                    </p>
+                  </a>
+                </div>
+                <!-- .swiper-slide end -->
+                <div class="swiper-slide">
+                  <a href="#" onclick="return false">
+                    <div>
+                      <h4>돼지목살 김치찌개</h4>
+                      <p>2023.12.24 04:31</p>
+                    </div>
+                    <figure>
+                      <img src="img/section02_img01.jpeg" alt="" />
+                    </figure>
+                    <p>
+                      우리가족 모두 좋아하는 돼지목살 김치찌개했어요 날이
+                      추워지니 이런 찌개 넘 맛있어요 밥도둑이 따로없지 뭐에요~
+                      동전육수 두 알에 물 맞춰 넣고 김치 물 양에 따라 넣고
+                      돼지목살 넣고 끓이다가 설탕으로 신맛을 중화시키고 여기서
+                      키포인트 된장 한숟갈!! 예!?된장을 넣는다구요?? 네네!!
+                      된장을 한 숟갈 넣음 깊고 구수한 맛이 나요 김치찌개가 더
+                      맛있어지는 마법입니다ㅋ(소곤) 요리 배울 때 들었숩니당ㅋ
+                      그리고 파 넣고 맛나게 드세요~ 내가 요리하는 이유는요
+                      일반적이고 흔한 요리지만 특별히 맛있게 만들 수 있는
+                      요리팁을 가진 무기가 있다면 그 요리에 자신이 생겨 뚝딱
+                      만들고 있어요~ 저만아는 꿀팁인데 김치찌개 된장 한 숟갈
+                      잊지마세요🤗🤗🤗
+                    </p>
+                  </a>
+                </div>
+                <!-- .swiper-slide end -->
+                <div class="swiper-slide">
+                  <a href="#" onclick="return false">
+                    <div>
+                      <h4>돼지목살 김치찌개</h4>
+                      <p>2023.12.24 04:31</p>
+                    </div>
+                    <figure>
+                      <img src="img/section02_img02.jpeg" alt="" />
+                    </figure>
+                    <p>
+                      우리가족 모두 좋아하는 돼지목살 김치찌개했어요 날이
+                      추워지니 이런 찌개 넘 맛있어요 밥도둑이 따로없지 뭐에요~
+                      동전육수 두 알에 물 맞춰 넣고 김치 물 양에 따라 넣고
+                      돼지목살 넣고 끓이다가 설탕으로 신맛을 중화시키고 여기서
+                      키포인트 된장 한숟갈!! 예!?된장을 넣는다구요?? 네네!!
+                      된장을 한 숟갈 넣음 깊고 구수한 맛이 나요 김치찌개가 더
+                      맛있어지는 마법입니다ㅋ(소곤) 요리 배울 때 들었숩니당ㅋ
+                      그리고 파 넣고 맛나게 드세요~ 내가 요리하는 이유는요
+                      일반적이고 흔한 요리지만 특별히 맛있게 만들 수 있는
+                      요리팁을 가진 무기가 있다면 그 요리에 자신이 생겨 뚝딱
+                      만들고 있어요~ 저만아는 꿀팁인데 김치찌개 된장 한 숟갈
+                      잊지마세요🤗🤗🤗
+                    </p>
+                  </a>
+                </div>
+                <!-- .swiper-slide end -->
+                <div class="swiper-slide">
+                  <a href="#" onclick="return false">
+                    <div>
+                      <h4>돼지목살 김치찌개</h4>
+                      <p>2023.12.24 04:31</p>
+                    </div>
+                    <figure>
+                      <img src="img/section02_img03.jpeg" alt="" />
+                    </figure>
+                    <p>
+                      우리가족 모두 좋아하는 돼지목살 김치찌개했어요 날이
+                      추워지니 이런 찌개 넘 맛있어요 밥도둑이 따로없지 뭐에요~
+                      동전육수 두 알에 물 맞춰 넣고 김치 물 양에 따라 넣고
+                      돼지목살 넣고 끓이다가 설탕으로 신맛을 중화시키고 여기서
+                      키포인트 된장 한숟갈!! 예!?된장을 넣는다구요?? 네네!!
+                      된장을 한 숟갈 넣음 깊고 구수한 맛이 나요 김치찌개가 더
+                      맛있어지는 마법입니다ㅋ(소곤) 요리 배울 때 들었숩니당ㅋ
+                      그리고 파 넣고 맛나게 드세요~ 내가 요리하는 이유는요
+                      일반적이고 흔한 요리지만 특별히 맛있게 만들 수 있는
+                      요리팁을 가진 무기가 있다면 그 요리에 자신이 생겨 뚝딱
+                      만들고 있어요~ 저만아는 꿀팁인데 김치찌개 된장 한 숟갈
+                      잊지마세요🤗🤗🤗
+                    </p>
+                  </a>
+                </div>
+                <!-- .swiper-slide end -->
+                <div class="swiper-slide">
+                  <a href="#" onclick="return false">
+                    <div>
+                      <h4>돼지목살 김치찌개</h4>
+                      <p>2023.12.24 04:31</p>
+                    </div>
+                    <figure>
+                      <img src="img/section01_img04.jpeg" alt="" />
+                    </figure>
+                    <p>
+                      우리가족 모두 좋아하는 돼지목살 김치찌개했어요 날이
+                      추워지니 이런 찌개 넘 맛있어요 밥도둑이 따로없지 뭐에요~
+                      동전육수 두 알에 물 맞춰 넣고 김치 물 양에 따라 넣고
+                      돼지목살 넣고 끓이다가 설탕으로 신맛을 중화시키고 여기서
+                      키포인트 된장 한숟갈!! 예!?된장을 넣는다구요?? 네네!!
+                      된장을 한 숟갈 넣음 깊고 구수한 맛이 나요 김치찌개가 더
+                      맛있어지는 마법입니다ㅋ(소곤) 요리 배울 때 들었숩니당ㅋ
+                      그리고 파 넣고 맛나게 드세요~ 내가 요리하는 이유는요
+                      일반적이고 흔한 요리지만 특별히 맛있게 만들 수 있는
+                      요리팁을 가진 무기가 있다면 그 요리에 자신이 생겨 뚝딱
+                      만들고 있어요~ 저만아는 꿀팁인데 김치찌개 된장 한 숟갈
+                      잊지마세요🤗🤗🤗
+                    </p>
+                  </a>
+                </div>
+                <!-- .swiper-slide end -->
+                <div class="swiper-slide">
+                  <a href="#" onclick="return false">
+                    <div>
+                      <h4>돼지목살 김치찌개</h4>
+                      <p>2023.12.24 04:31</p>
+                    </div>
+                    <figure>
+                      <img src="img/section01_img05.jpeg" alt="" />
+                    </figure>
+                    <p>
+                      우리가족 모두 좋아하는 돼지목살 김치찌개했어요 날이
+                      추워지니 이런 찌개 넘 맛있어요 밥도둑이 따로없지 뭐에요~
+                      동전육수 두 알에 물 맞춰 넣고 김치 물 양에 따라 넣고
+                      돼지목살 넣고 끓이다가 설탕으로 신맛을 중화시키고 여기서
+                      키포인트 된장 한숟갈!! 예!?된장을 넣는다구요?? 네네!!
+                      된장을 한 숟갈 넣음 깊고 구수한 맛이 나요 김치찌개가 더
+                      맛있어지는 마법입니다ㅋ(소곤) 요리 배울 때 들었숩니당ㅋ
+                      그리고 파 넣고 맛나게 드세요~ 내가 요리하는 이유는요
+                      일반적이고 흔한 요리지만 특별히 맛있게 만들 수 있는
+                      요리팁을 가진 무기가 있다면 그 요리에 자신이 생겨 뚝딱
+                      만들고 있어요~ 저만아는 꿀팁인데 김치찌개 된장 한 숟갈
+                      잊지마세요🤗🤗🤗
+                    </p>
+                  </a>
+                </div>
+                <!-- .swiper-slide end -->
+                <div class="swiper-slide">
+                  <a href="#" onclick="return false">
+                    <div>
+                      <h4>돼지목살 김치찌개</h4>
+                      <p>2023.12.24 04:31</p>
+                    </div>
+                    <figure>
+                      <img src="img/section02_img06.jpeg" alt="" />
+                    </figure>
+                    <p>
+                      우리가족 모두 좋아하는 돼지목살 김치찌개했어요 날이
+                      추워지니 이런 찌개 넘 맛있어요 밥도둑이 따로없지 뭐에요~
+                      동전육수 두 알에 물 맞춰 넣고 김치 물 양에 따라 넣고
+                      돼지목살 넣고 끓이다가 설탕으로 신맛을 중화시키고 여기서
+                      키포인트 된장 한숟갈!! 예!?된장을 넣는다구요?? 네네!!
+                      된장을 한 숟갈 넣음 깊고 구수한 맛이 나요 김치찌개가 더
+                      맛있어지는 마법입니다ㅋ(소곤) 요리 배울 때 들었숩니당ㅋ
+                      그리고 파 넣고 맛나게 드세요~ 내가 요리하는 이유는요
+                      일반적이고 흔한 요리지만 특별히 맛있게 만들 수 있는
+                      요리팁을 가진 무기가 있다면 그 요리에 자신이 생겨 뚝딱
+                      만들고 있어요~ 저만아는 꿀팁인데 김치찌개 된장 한 숟갈
+                      잊지마세요🤗🤗🤗
+                    </p>
+                  </a>
+                </div>
+                <!-- .swiper-slide end -->
+                <div class="swiper-slide">
+                  <a href="#" onclick="return false">
+                    <div>
+                      <h4>돼지목살 김치찌개</h4>
+                      <p>2023.12.24 04:31</p>
+                    </div>
+                    <figure>
+                      <img src="img/section02_img07.jpeg" alt="" />
+                    </figure>
+                    <p>
+                      우리가족 모두 좋아하는 돼지목살 김치찌개했어요 날이
+                      추워지니 이런 찌개 넘 맛있어요 밥도둑이 따로없지 뭐에요~
+                      동전육수 두 알에 물 맞춰 넣고 김치 물 양에 따라 넣고
+                      돼지목살 넣고 끓이다가 설탕으로 신맛을 중화시키고 여기서
+                      키포인트 된장 한숟갈!! 예!?된장을 넣는다구요?? 네네!!
+                      된장을 한 숟갈 넣음 깊고 구수한 맛이 나요 김치찌개가 더
+                      맛있어지는 마법입니다ㅋ(소곤) 요리 배울 때 들었숩니당ㅋ
+                      그리고 파 넣고 맛나게 드세요~ 내가 요리하는 이유는요
+                      일반적이고 흔한 요리지만 특별히 맛있게 만들 수 있는
+                      요리팁을 가진 무기가 있다면 그 요리에 자신이 생겨 뚝딱
+                      만들고 있어요~ 저만아는 꿀팁인데 김치찌개 된장 한 숟갈
+                      잊지마세요🤗🤗🤗
+                    </p>
+                  </a>
+                </div>
+                <!-- .swiper-slide end -->
+                <div class="swiper-slide">
+                  <a href="#" onclick="return false">
+                    <div>
+                      <h4>돼지목살 김치찌개</h4>
+                      <p>2023.12.24 04:31</p>
+                    </div>
+                    <figure>
+                      <img src="img/section02_img08.png" alt="" />
+                    </figure>
+                    <p>
+                      우리가족 모두 좋아하는 돼지목살 김치찌개했어요 날이
+                      추워지니 이런 찌개 넘 맛있어요 밥도둑이 따로없지 뭐에요~
+                      동전육수 두 알에 물 맞춰 넣고 김치 물 양에 따라 넣고
+                      돼지목살 넣고 끓이다가 설탕으로 신맛을 중화시키고 여기서
+                      키포인트 된장 한숟갈!! 예!?된장을 넣는다구요?? 네네!!
+                      된장을 한 숟갈 넣음 깊고 구수한 맛이 나요 김치찌개가 더
+                      맛있어지는 마법입니다ㅋ(소곤) 요리 배울 때 들었숩니당ㅋ
+                      그리고 파 넣고 맛나게 드세요~ 내가 요리하는 이유는요
+                      일반적이고 흔한 요리지만 특별히 맛있게 만들 수 있는
+                      요리팁을 가진 무기가 있다면 그 요리에 자신이 생겨 뚝딱
+                      만들고 있어요~ 저만아는 꿀팁인데 김치찌개 된장 한 숟갈
+                      잊지마세요🤗🤗🤗
+                    </p>
+                  </a>
+                </div>
+                <!-- .swiper-slide end -->
+                <div class="swiper-slide">
+                  <a href="#" onclick="return false">
+                    <div>
+                      <h4>돼지목살 김치찌개</h4>
+                      <p>2023.12.24 04:31</p>
+                    </div>
+                    <figure>
+                      <img src="img/section02_img09.jpeg" alt="" />
+                    </figure>
+                    <p>
+                      우리가족 모두 좋아하는 돼지목살 김치찌개했어요 날이
+                      추워지니 이런 찌개 넘 맛있어요 밥도둑이 따로없지 뭐에요~
+                      동전육수 두 알에 물 맞춰 넣고 김치 물 양에 따라 넣고
+                      돼지목살 넣고 끓이다가 설탕으로 신맛을 중화시키고 여기서
+                      키포인트 된장 한숟갈!! 예!?된장을 넣는다구요?? 네네!!
+                      된장을 한 숟갈 넣음 깊고 구수한 맛이 나요 김치찌개가 더
+                      맛있어지는 마법입니다ㅋ(소곤) 요리 배울 때 들었숩니당ㅋ
+                      그리고 파 넣고 맛나게 드세요~ 내가 요리하는 이유는요
+                      일반적이고 흔한 요리지만 특별히 맛있게 만들 수 있는
+                      요리팁을 가진 무기가 있다면 그 요리에 자신이 생겨 뚝딱
+                      만들고 있어요~ 저만아는 꿀팁인데 김치찌개 된장 한 숟갈
+                      잊지마세요🤗🤗🤗
+                    </p>
+                  </a>
+                </div>
+                <!-- .swiper-slide end -->
+                <div class="swiper-slide">
+                  <a href="#" onclick="return false">
+                    <div>
+                      <h4>돼지목살 김치찌개</h4>
+                      <p>2023.12.24 04:31</p>
+                    </div>
+                    <figure>
+                      <img src="img/section02_img10.jpeg" alt="" />
+                    </figure>
+                    <p>
+                      우리가족 모두 좋아하는 돼지목살 김치찌개했어요 날이
+                      추워지니 이런 찌개 넘 맛있어요 밥도둑이 따로없지 뭐에요~
+                      동전육수 두 알에 물 맞춰 넣고 김치 물 양에 따라 넣고
+                      돼지목살 넣고 끓이다가 설탕으로 신맛을 중화시키고 여기서
+                      키포인트 된장 한숟갈!! 예!?된장을 넣는다구요?? 네네!!
+                      된장을 한 숟갈 넣음 깊고 구수한 맛이 나요 김치찌개가 더
+                      맛있어지는 마법입니다ㅋ(소곤) 요리 배울 때 들었숩니당ㅋ
+                      그리고 파 넣고 맛나게 드세요~ 내가 요리하는 이유는요
+                      일반적이고 흔한 요리지만 특별히 맛있게 만들 수 있는
+                      요리팁을 가진 무기가 있다면 그 요리에 자신이 생겨 뚝딱
+                      만들고 있어요~ 저만아는 꿀팁인데 김치찌개 된장 한 숟갈
+                      잊지마세요🤗🤗🤗
+                    </p>
+                  </a>
+                </div>
+                <!-- .swiper-slide end -->
+                <div class="swiper-slide">
+                  <a href="#" onclick="return false">
+                    <div>
+                      <h4>돼지목살 김치찌개</h4>
+                      <p>2023.12.24 04:31</p>
+                    </div>
+                    <figure>
+                      <img src="img/section02_img11.jpeg" alt="" />
+                    </figure>
+                    <p>
+                      우리가족 모두 좋아하는 돼지목살 김치찌개했어요 날이
+                      추워지니 이런 찌개 넘 맛있어요 밥도둑이 따로없지 뭐에요~
+                      동전육수 두 알에 물 맞춰 넣고 김치 물 양에 따라 넣고
+                      돼지목살 넣고 끓이다가 설탕으로 신맛을 중화시키고 여기서
+                      키포인트 된장 한숟갈!! 예!?된장을 넣는다구요?? 네네!!
+                      된장을 한 숟갈 넣음 깊고 구수한 맛이 나요 김치찌개가 더
+                      맛있어지는 마법입니다ㅋ(소곤) 요리 배울 때 들었숩니당ㅋ
+                      그리고 파 넣고 맛나게 드세요~ 내가 요리하는 이유는요
+                      일반적이고 흔한 요리지만 특별히 맛있게 만들 수 있는
+                      요리팁을 가진 무기가 있다면 그 요리에 자신이 생겨 뚝딱
+                      만들고 있어요~ 저만아는 꿀팁인데 김치찌개 된장 한 숟갈
+                      잊지마세요🤗🤗🤗
+                    </p>
+                  </a>
+                </div>
+                <!-- .swiper-slide end -->
+                <div class="swiper-slide">
+                  <a href="#" onclick="return false">
+                    <div>
+                      <h4>돼지목살 김치찌개</h4>
+                      <p>2023.12.24 04:31</p>
+                    </div>
+                    <figure>
+                      <img src="img/section02_img12.jpeg" alt="" />
+                    </figure>
+                    <p>
+                      우리가족 모두 좋아하는 돼지목살 김치찌개했어요 날이
+                      추워지니 이런 찌개 넘 맛있어요 밥도둑이 따로없지 뭐에요~
+                      동전육수 두 알에 물 맞춰 넣고 김치 물 양에 따라 넣고
+                      돼지목살 넣고 끓이다가 설탕으로 신맛을 중화시키고 여기서
+                      키포인트 된장 한숟갈!! 예!?된장을 넣는다구요?? 네네!!
+                      된장을 한 숟갈 넣음 깊고 구수한 맛이 나요 김치찌개가 더
+                      맛있어지는 마법입니다ㅋ(소곤) 요리 배울 때 들었숩니당ㅋ
+                      그리고 파 넣고 맛나게 드세요~ 내가 요리하는 이유는요
+                      일반적이고 흔한 요리지만 특별히 맛있게 만들 수 있는
+                      요리팁을 가진 무기가 있다면 그 요리에 자신이 생겨 뚝딱
+                      만들고 있어요~ 저만아는 꿀팁인데 김치찌개 된장 한 숟갈
+                      잊지마세요🤗🤗🤗
+                    </p>
+                  </a>
+                </div>
+                <!-- .swiper-slide end -->
+                <div class="swiper-slide">
+                  <a href="#" onclick="return false">
+                    <div>
+                      <h4>돼지목살 김치찌개</h4>
+                      <p>2023.12.24 04:31</p>
+                    </div>
+                    <figure>
+                      <img src="img/section02_img13.jpeg" alt="" />
+                    </figure>
+                    <p>
+                      우리가족 모두 좋아하는 돼지목살 김치찌개했어요 날이
+                      추워지니 이런 찌개 넘 맛있어요 밥도둑이 따로없지 뭐에요~
+                      동전육수 두 알에 물 맞춰 넣고 김치 물 양에 따라 넣고
+                      돼지목살 넣고 끓이다가 설탕으로 신맛을 중화시키고 여기서
+                      키포인트 된장 한숟갈!! 예!?된장을 넣는다구요?? 네네!!
+                      된장을 한 숟갈 넣음 깊고 구수한 맛이 나요 김치찌개가 더
+                      맛있어지는 마법입니다ㅋ(소곤) 요리 배울 때 들었숩니당ㅋ
+                      그리고 파 넣고 맛나게 드세요~ 내가 요리하는 이유는요
+                      일반적이고 흔한 요리지만 특별히 맛있게 만들 수 있는
+                      요리팁을 가진 무기가 있다면 그 요리에 자신이 생겨 뚝딱
+                      만들고 있어요~ 저만아는 꿀팁인데 김치찌개 된장 한 숟갈
+                      잊지마세요🤗🤗🤗
+                    </p>
+                  </a>
+                </div>
+                <!-- .swiper-slide end -->
+                <div class="swiper-slide">
+                  <a href="#" onclick="return false">
+                    <div>
+                      <h4>돼지목살 김치찌개</h4>
+                      <p>2023.12.24 04:31</p>
+                    </div>
+                    <figure>
+                      <img src="img/section02_img14.jpeg" alt="" />
+                    </figure>
+                    <p>
+                      우리가족 모두 좋아하는 돼지목살 김치찌개했어요 날이
+                      추워지니 이런 찌개 넘 맛있어요 밥도둑이 따로없지 뭐에요~
+                      동전육수 두 알에 물 맞춰 넣고 김치 물 양에 따라 넣고
+                      돼지목살 넣고 끓이다가 설탕으로 신맛을 중화시키고 여기서
+                      키포인트 된장 한숟갈!! 예!?된장을 넣는다구요?? 네네!!
+                      된장을 한 숟갈 넣음 깊고 구수한 맛이 나요 김치찌개가 더
+                      맛있어지는 마법입니다ㅋ(소곤) 요리 배울 때 들었숩니당ㅋ
+                      그리고 파 넣고 맛나게 드세요~ 내가 요리하는 이유는요
+                      일반적이고 흔한 요리지만 특별히 맛있게 만들 수 있는
+                      요리팁을 가진 무기가 있다면 그 요리에 자신이 생겨 뚝딱
+                      만들고 있어요~ 저만아는 꿀팁인데 김치찌개 된장 한 숟갈
+                      잊지마세요🤗🤗🤗
+                    </p>
+                  </a>
+                </div>
+                <!-- .swiper-slide end -->
+                <div class="swiper-slide">
+                  <a href="#" onclick="return false">
+                    <div>
+                      <h4>돼지목살 김치찌개</h4>
+                      <p>2023.12.24 04:31</p>
+                    </div>
+                    <figure>
+                      <img src="img/section02_img15.jpeg" alt="" />
+                    </figure>
+                    <p>
+                      우리가족 모두 좋아하는 돼지목살 김치찌개했어요 날이
+                      추워지니 이런 찌개 넘 맛있어요 밥도둑이 따로없지 뭐에요~
+                      동전육수 두 알에 물 맞춰 넣고 김치 물 양에 따라 넣고
+                      돼지목살 넣고 끓이다가 설탕으로 신맛을 중화시키고 여기서
+                      키포인트 된장 한숟갈!! 예!?된장을 넣는다구요?? 네네!!
+                      된장을 한 숟갈 넣음 깊고 구수한 맛이 나요 김치찌개가 더
+                      맛있어지는 마법입니다ㅋ(소곤) 요리 배울 때 들었숩니당ㅋ
+                      그리고 파 넣고 맛나게 드세요~ 내가 요리하는 이유는요
+                      일반적이고 흔한 요리지만 특별히 맛있게 만들 수 있는
+                      요리팁을 가진 무기가 있다면 그 요리에 자신이 생겨 뚝딱
+                      만들고 있어요~ 저만아는 꿀팁인데 김치찌개 된장 한 숟갈
+                      잊지마세요🤗🤗🤗
+                    </p>
+                  </a>
+                </div>
+                <!-- .swiper-slide end -->
+              </div>
+              <!-- .swiper-wrapper end -->
+              <div class="swiper-button-next"></div>
+              <div class="swiper-button-prev"></div>
+            </div>
+            <!-- .swiper end -->
+          </div>
+          <!-- .list end -->
+          <div class="post">
+            <strong> 나만의 요리를 올려주세요! </strong>
+            <a href="#" onclick="return false">
+              작성하기
+              <i class="fa-solid fa-pencil"></i>
+            </a>
+          </div>
+        </section>
+        <!-- .section02 end -->
+
+        <section class="banner">
+          <div class="title">
+            <div class="title__logo">
+              <img src="img/banner__title_img.png" alt="" />
+              <h3>이벤트</h3>
+            </div>
+            <a href="#" onclick="return false">
+              더보기
+              <img src="img/right__img.png" alt="" />
+            </a>
+          </div>
+          <!-- .title end -->
+          <!-- Swiper -->
+          <div class="swiper mySwiper04">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <figure>
+                  <img src="img/banner.jpeg" alt="" />
+                </figure>
+              </div>
+              <div class="swiper-slide">
+                <figure>
+                  <img src="img/banner.jpeg" alt="" />
+                </figure>
+              </div>
+            </div>
+            <div class="swiper-pagination"></div>
+          </div>
+        </section>
+        <!-- .banner end -->
+      </main>
+      <!-- main end -->
+
+      <footer id="footer" class="footer">
+        <div class="footer__left">
+          <ul class="footer__link">
+            <li><a href="#" onclick="return false">이용약관</a></li>
+            <li><a href="#" onclick="return false">개인정보처리방침</a></li>
+            <li><a href="#" onclick="return false">이용 가이드</a></li>
+            <li><a href="#" onclick="return false">ABOUT US</a></li>
+          </ul>
+          <ul class="footer__info">
+            <li>샘표식품(주)</li>
+            <li>서울특별시 중구 충무로2 (우편번호: 04557)</li>
+          </ul>
+          <div class="copyright">
+            Copyright © 샘표식품, All Rights Reserved.
+          </div>
+        </div>
+        <!-- .footer__left end -->
+        <div class="footer__right">
+          <ul class="contact">
+            <li class="kkt">
+              <a href="https://www.instagram.com/semie_kitchen/"
+                ><img src="img/insta_img.png" alt=""
+              /></a>
+            </li>
+            <li class="insta">
+              <a href="https://pf.kakao.com/_Hxoxkxab"
+                ><img src="img/kkt_img.png" alt=""
+              /></a>
+            </li>
+            <li>
+              <button class="websites__btn">
+                관련사이트<img src="img/plus_img.png" alt="" />
+              </button>
+              <div class="websites__link">
+                <ul>
+                  <li><a href="https://www.sempio.com/">샘표기업</a></li>
+                  <li>
+                    <a href="https://semie.cooking/">새미네부엌 플랫폼</a>
+                  </li>
+                  <li>
+                    <a href="http://www.tasiakitchen.co.kr/default/"
+                      >티・아시아</a
+                    >
+                  </li>
+                  <li>
+                    <a href="http://www.semie-kitchen.com/default/"
+                      >새미네부엌</a
+                    >
+                  </li>
+                  <li>
+                    <a href="http://www.fontanastyle.com/main.do">폰타나</a>
+                  </li>
+                  <li>
+                    <a
+                      href="https://sempio.recruiter.co.kr/appsite/company/index"
+                      >샘표채용</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      href="https://member.sempio.com/login;jsessionid=3A07DBA2C77718AC01DFF9CF98C0D6B3"
+                      >샘표 통합회원 웹사이트</a
+                    >
+                  </li>
+                </ul>
+              </div>
+            </li>
+          </ul>
+          <button class="up__btn">
+            <img src="img/up_img.png" alt="" />
+          </button>
+        </div>
+        <!-- .footer__right end -->
+      </footer>
+      <!-- .footer end -->
+    </div>
+
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
+      integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+    <!-- Initialize Swiper -->
+    <script>
+      var swiper = new Swiper("main__left-swiper01", {});
+      var swiper = new Swiper("main__left-swiper02", {});
+      var swiper = new Swiper("main__center-swiper", {});
+      var swiper = new Swiper("main__right-swiper01", {
+        on: {
+          activeIndexChange: function () {
+            const cIdx = this.realIndex + 1;
+            $(".current-num").text("0" + cIdx);
+          },
+        },
+        navigation: {
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev",
+        },
+        pagination: {
+          el: ".swiper-pagination",
+          clickable: true,
+        },
+        scrollbar: {
+          el: ".swiper-scrollbar",
+        },
+      });
+      var swiper = new Swiper("main__right-swiper02", {});
+
+      var swiper = new Swiper(".mySwiper02", {
+        slidesPerView: 4,
+        spaceBetween: 30,
+        navigation: {
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev",
+        },
+        autoplay: {
+          delay: 2500,
+          disableOnInteraction: false,
+        },
+      });
+      var swiper = new Swiper(".mySwiper03", {
+        slidesPerView: 5,
+        spaceBetween: 30,
+        navigation: {
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev",
+        },
+        autoplay: {
+          delay: 2500,
+          disableOnInteraction: false,
+        },
+      });
+      var swiper = new Swiper(".mySwiper04", {
+        slidesPerView: 1,
+        pagination: {
+          el: ".swiper-pagination",
+          type: "fraction",
+        },
+        autoplay: {
+          delay: 2500,
+          disableOnInteraction: false,
+        },
+      });
+    </script>
+
+    <script>
+      const otherSite = document.querySelector(".websites__btn");
+      const siteLink = document.querySelector(".websites__link");
+      const up = document.querySelector(".up__btn");
+
+      siteLink.style.display = "none";
+      otherSite.addEventListener("click", () => {
+        console.log("fff");
+        if (siteLink.style.display == "none") {
+          siteLink.style.display = "block";
+        } else if (siteLink.style.display == "block") {
+          siteLink.style.display = "none";
+        }
+      });
+
+      /* scroll to top */
+      up.addEventListener("click", () => {
+        $("html, body").animate({ scrollTop: 0 }, "slow");
+      });
+
+      /* appear the header when scrolling */
+      // const header = document.querySelector('.header');
+      // const headerHeight = header.getBoundingClientRect().height
+      // document.addEventListener('scroll', ()=>{
+      //     header.style.opacity = 0;
+      // })
+    </script>
+  </body>
+</html>
